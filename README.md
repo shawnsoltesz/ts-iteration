@@ -1,4 +1,4 @@
-# JavaScript Iteration
+# TypeScript Iteration
 
 ## Instructions
 
@@ -8,5 +8,5 @@
 4. Change into your project's directory: `cd js-iteration`
 5. Install the dependencies: `npm install`
 6. Open in your editor: `code .`
-7. Start the test runner: `npm test`
-8. Open `src/functions.test.js` and work on functions until tests pass.
+7. Start the test runner: `npm start`
+8. Open `src/functions.ts` and work on functions until tests pass.
