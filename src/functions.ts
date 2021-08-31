@@ -60,7 +60,6 @@ function stringyIndexes(strings: string[]): string[] {
   const newStringyIndexes = strings.map(
     (string, index) => `${string} is at index ${index}`
   )
-
   return newStringyIndexes
 }
 
@@ -73,8 +72,8 @@ function stringyIndexes(strings: string[]): string[] {
  */
 
 function onlyTheEvenSurvive(numbers: number[]): number[] {
-  // Replace the code below with your own code
-  return []
+  const evenNumbers = numbers.filter(number => number % 2 === 0)
+  return evenNumbers
 }
 
 /*
@@ -86,8 +85,8 @@ function onlyTheEvenSurvive(numbers: number[]): number[] {
  */
 
 function onlyTheEvenIndexedSurvive(numbers: number[]): number[] {
-  // Replace the code below with your own code
-  return []
+  const evenIndexed = numbers.filter((number, index) => index % 2 === 0)
+  return evenIndexed
 }
 
 /*
