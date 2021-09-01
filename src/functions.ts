@@ -144,8 +144,7 @@ function everyoneIsOdd(numbers: number[]): boolean {
  */
 
 function findTheNeedle(strings: string[]): string {
-  const findTheString = strings.find(string => string === 'needle')
-  return findTheString as string
+  return strings.find(string => string.includes('needle')) || ''
 }
 
 /*
