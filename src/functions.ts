@@ -43,7 +43,7 @@ function yelling(words: string[]): string[] {
  */
 
 function doubleTrouble(numbers: number[]): number[] {
-  let newDoubleTrouble = numbers.map(number => number * 2)
+  const newDoubleTrouble = numbers.map(number => number * 2)
   return newDoubleTrouble
 }
 
@@ -115,8 +115,9 @@ function bestMoviesOfTheYear(
   movieObjectArray: Movie[],
   year: number
 ): string[] {
-  // Replace the code below with your own code
-  return []
+  return movieObjectArray
+    .filter(movie => movie.year === year && movie.score > 90)
+    .map(movie => movie.name)
 }
 
 /*
@@ -129,8 +130,8 @@ function bestMoviesOfTheYear(
  */
 
 function everyoneIsOdd(numbers: number[]): boolean {
-  // Replace the code below with your own code
-  return false
+  const allOdd = numbers.every(number => number % 2 !== 0)
+  return allOdd
 }
 
 /*
@@ -143,8 +144,8 @@ function everyoneIsOdd(numbers: number[]): boolean {
  */
 
 function findTheNeedle(strings: string[]): string {
-  // Replace the code below with your own code
-  return ''
+  const findTheString = strings.find(string => string === 'needle')
+  return findTheString as string
 }
 
 /*
@@ -157,8 +158,7 @@ function findTheNeedle(strings: string[]): string {
  */
 
 function findTheNeedleIndex(strings: string[]): number {
-  // Replace the code below with your own code
-  return 42
+  return strings.findIndex(string => string.includes('needle'))
 }
 
 /*
@@ -171,8 +171,7 @@ function findTheNeedleIndex(strings: string[]): number {
  */
 
 function someoneToLove(strings: string[]): boolean {
-  // Replace the code below with your own code
-  return false
+  return strings.some(string => string.length === 4)
 }
 
 /*
@@ -210,8 +209,9 @@ function someoneToLove(strings: string[]): boolean {
 
 type Hobbies = Record<string, { title: string; description: string }>
 function objectKeys(objectOfHobbies: Hobbies): string[] {
-  // Replace the code below with your own code
-  return []
+  return Object.keys(objectOfHobbies).map(
+    object => `${object} - ${objectOfHobbies[object].title}`
+  )
 }
 
 /**
